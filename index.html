@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .bdesign
+            {
+                height:30px;
+                width:60px;
+            }
+            .button:hover 
+            {
+                background-color: skyblue;
+                color: white;
+            }
+            .signbutton:hover 
+            {
+                background-color: darkseagreen;
+                color: white;
+            }
+            .equalbutton:hover 
+            {
+                background-color: red;
+                color: white;
+            }
+        </style>
+        <script type='text/javascript' src='equalResponse.js'></script>
+        <script>
+            var input_tape="";
+            function f()
+            {
+                var buttons = document.getElementsByTagName("button");
+                var buttonsCount = buttons.length;
+                //alert(buttonsCount);
+                for (var i = 0; i <= buttonsCount; i += 1) 
+                {
+                    buttons[i].onclick = function(e) 
+                    {
+                        if(this.id==='id1')
+                        {
+                            input_tape+='1';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id2')
+                        {
+                            input_tape+='2';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id3')
+                        {
+                            input_tape+='3';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id4')
+                        {
+                            input_tape+='4';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id5')
+                        {
+                            input_tape+='5';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id6')
+                        {
+                            input_tape+='6';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id7')
+                        {
+                            input_tape+='7';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id8')
+                        {
+                            input_tape+='8';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id9')
+                        {
+                            input_tape+='9';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='id0')
+                        {
+                            input_tape+='0';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idF')
+                        {
+                            input_tape+='F';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idA')
+                        {
+                            input_tape+='A';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idB')
+                        {
+                            input_tape+='B';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idC')
+                        {
+                            input_tape+='C';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idD')
+                        {
+                            input_tape+='D';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idE')
+                        {
+                            input_tape+='E';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idp')
+                        {
+                            input_tape+='+';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='ids')
+                        {
+                            input_tape+='-';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idm')
+                        {
+                            input_tape+='*';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idd')
+                        {
+                            input_tape+='/';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idAnd')
+                        {
+                            input_tape+=' AND ';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idOr')
+                        {
+                            input_tape+=' OR ';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idNot')
+                        {
+                            input_tape+=' NOT ';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idXor')
+                        {
+                            input_tape+=' XOR ';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idequal')
+                        {
+                            var input_tape_temp=document.getElementById("input_tape").value;
+                            //alert(input_tape_temp);
+                            getInputTape(input_tape_temp);
+                        }
+                    };
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+    <center>
+        <table border="1">
+            <tr>
+                <td colspan = "5">
+                    <input type='text' id='input_tape' placeholder='0' size='42'>
+                </td>
+            </tr>
+            <tr>
+                <td><button class="bdesign button" id='id1' onclick="f()">1</button></td>
+                <td><button class="bdesign button" id='id2' onclick="f()">2</button></td>
+                <td><button class="bdesign button" id='id3' onclick="f()">3</button></td>
+                <td><button class="bdesign button" id='id4' onclick="f()">4</button></td>
+                <td><button class="bdesign signbutton" id='idp' onclick="f()">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="bdesign button" id='id5' onclick="f()">5</button></td>
+                <td><button class="bdesign button" id='id6' onclick="f()">6</button></td>
+                <td><button class="bdesign button" id='id7' onclick="f()">7</button></td>
+                <td><button class="bdesign button" id='id8' onclick="f()">8</button></td>
+                <td><button class="bdesign signbutton" id='ids' onclick="f()">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="bdesign button" id='id9' onclick="f()">9</button></td>
+                <td><button class="bdesign button" id='id0' onclick="f()">0</button></td>
+                <td><button class="bdesign button" id='idA' onclick="f()">A</button></td>
+                <td><button class="bdesign button" id='idB' onclick="f()">B</button></td>
+                <td><button class="bdesign signbutton" id='idm' onclick="f()">*</button></td>
+            </tr>
+            <tr>
+               <td><button class="bdesign button" id='idC' onclick="f()">C</button></td>
+               <td><button class="bdesign button" id='idD' onclick="f()">D</button></td>
+               <td><button class="bdesign button" id='idE' onclick="f()">E</button></td>
+               <td><button class="bdesign button" id='idF' onclick="f()">F</button></td>
+               <td><button class="bdesign signbutton" id='idd' onclick="f()">/</button></td>
+            </tr>
+            <tr>
+               <td><button class="bdesign signbutton" id='idAnd' onclick="f()">&&</button></td>
+               <td><button class="bdesign signbutton" id='idOr' onclick="f()">||</button></td>
+               <td><button class="bdesign signbutton" id='idNot' onclick="f()">~</button></td>
+               <td><button class="bdesign signbutton" id='idXor' onclick="f()">^</button></td>
+               <td><button class="bdesign equalbutton" id='idequal' onclick="f()">=</button></td>
+            </tr>
+        </table>
+        </center>
+    </body>
+</html>
