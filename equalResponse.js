@@ -1,5 +1,6 @@
 document.writeln("<script type='text/javascript' src='addition.js'></script>");
 document.writeln("<script type='text/javascript' src='subtraction.js'></script>");
+document.writeln("<script type='text/javascript' src='multiply.js'></script>");
 document.writeln("<script type='text/javascript' src='LogicalAnd.js'></script>");
 document.writeln("<script type='text/javascript' src='LogicalOr.js'></script>");
 document.writeln("<script type='text/javascript' src='LogicalXor.js'></script>");
@@ -19,6 +20,12 @@ function getInputTape(input_tape)
         input_array=input_tape.split('-');
         //alert(input_array[0]+" , "+input_array[1]);
         sub(input_array);
+    }
+    else if(input_tape.includes('*'))
+    {
+        input_array=input_tape.split('*');
+        alert(input_array[0]+" , "+input_array[1]);
+        multiplication(input_array);
     }
     else if(input_tape.includes(' AND '))
     {
