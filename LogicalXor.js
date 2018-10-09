@@ -64,5 +64,5 @@ function logicalXor(input_array)
             }
         }
     }
-    document.getElementById("input_tape").value=final_result;
+    document.getElementById("input_tape").value=input_array[0]+' XOR '+input_array[1]+' = '+final_result;
 }

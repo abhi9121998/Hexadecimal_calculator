@@ -41,5 +41,5 @@ function logicalNot(input_ele)
         final_result=result+final_result;
         //alert('final_result : '+final_result);
     }
-    document.getElementById("input_tape").value=final_result;
+    document.getElementById("input_tape").value=' ~'+input_ele+' = '+final_result;
 }

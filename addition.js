@@ -35,7 +35,6 @@ function add(input_array)
     var final_result="";
     for(i=a.length-1, j=b.length-1; i>=0 && j>=0; i--, j--)
     {
-        //alert('a & len: '+a[i]+" "+'b & len: '+b[j])
         var x=parseInt(getValue1(a[i]));
         var y=parseInt(getValue1(b[j]));            
         if(x>15 || y>15)
@@ -58,13 +57,7 @@ function add(input_array)
         {
             final_result=carry+final_result;
             //alert('Final_result : '+final_result);
-            //document.getElementById("input_tape").value=final_result;
         }
-        //else
-        //{
-            //document.getElementById("input_tape").value=final_result;
-            //alert('Final_result : '+final_result);
-        //}
     }
     while(i>=0)
     {
@@ -82,10 +75,6 @@ function add(input_array)
             final_result=carry+final_result;
             //alert('Final_result : '+final_result);
         }
-        /*else
-        {
-            alert('Final_result : '+final_result);
-        }*/
         i--;
     }
     while(j>=0)
@@ -104,13 +93,10 @@ function add(input_array)
             final_result=carry+final_result;
             //alert('Final_result : '+final_result);
         }
-        /*else
-        {
-            alert('Final_result : '+final_result);
-        }*/
         j--;
     }
-    document.getElementById("input_tape").value=final_result;
+    document.getElementById("input_tape").value=input_array[0]+'+'+input_array[1]+' = '+final_result;
+    return final_result;
 }
 
 

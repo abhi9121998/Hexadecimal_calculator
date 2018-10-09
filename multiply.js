@@ -51,18 +51,26 @@ function multiplication(input_array)
         {
             result[index]=carry+result[index];
         }
+        result[index]=result[index].slice(0,result[index].length-1);
         for(var k=0; k<index; k++)
         {
             result[index]=result[index]+'0';
         }
-        result[index]=result[index].slice(0,result[index].length-1);
         //alert(result[index]);
         i=temp;
         index++;
         carry=0;
     }
-    for(var i=0; i<result.length; i++)
+    var temp=new Array(2);
+    for(var d=0; d<result.length-1; d++)
     {
-        alert(result[k]);
+        temp[0]=result[d];
+        temp[1]=result[d+1];
+        //alert('temp : '+temp[0]+' '+temp[1]);
+        result[d+1]=add(temp);
+        //alert(result[d+1]);
     }
+    final_result=result[result.length-1];
+    //alert('final_result : '+final_result);
+    document.getElementById('input_tape').value=input_array[0]+'*'+input_array[1]+' = '+final_result;
 }

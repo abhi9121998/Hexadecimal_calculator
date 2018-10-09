@@ -24,7 +24,7 @@ function getInputTape(input_tape)
     else if(input_tape.includes('*'))
     {
         input_array=input_tape.split('*');
-        alert(input_array[0]+" , "+input_array[1]);
+        //alert(input_array[0]+" , "+input_array[1]);
         multiplication(input_array);
     }
     else if(input_tape.includes(' AND '))

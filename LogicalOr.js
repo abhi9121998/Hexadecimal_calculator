@@ -64,5 +64,5 @@ function logicalOr(input_array)
         }
     }
     //alert('final_result : '+final_result);
-    document.getElementById("input_tape").value=final_result;
+    document.getElementById("input_tape").value=input_array[0]+' OR '+input_array[1]+' = '+final_result;
 }

@@ -102,6 +102,6 @@ function logicalAnd(input_array)
             final_result='0'+final_result;
         }
     }
-    document.getElementById("input_tape").value=final_result;
+    document.getElementById("input_tape").value=input_array[0]+' AND '+input_array[1]+' = '+final_result;
 }
 

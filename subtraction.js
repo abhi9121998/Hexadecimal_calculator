@@ -58,14 +58,14 @@ function sub(input_array)
         if(borrow)
         {
             x=x-1;
-            alert('after borrow : '+x);
+            //alert('after borrow : '+x);
         }
         if(x>=y)
         {
             borrow=false;
             result=x-y;
             result=check(result);
-            alert('result : '+result);
+            //alert('result : '+result);
         }
         else
         {
@@ -73,7 +73,7 @@ function sub(input_array)
             x=x+16;
             result=x-y;
             result=check(result);
-            alert('result : '+result);
+            //alert('result : '+result);
         }
         var temp=final_result;
         final_result=result+temp;
@@ -91,7 +91,7 @@ function sub(input_array)
         alert('result : '+result);
         var temp=final_result;
         final_result=result+temp;
-        alert('fresult : '+final_result);
+        //alert('fresult : '+final_result);
         i--;
     }
     while(j>=0)
@@ -106,10 +106,10 @@ function sub(input_array)
         result=check(result);
         var temp=final_result;
         final_result=result+temp;
-        alert('fresult : '+final_result);
+        //alert('fresult : '+final_result);
         j--;
     }
-    document.getElementById("input_tape").value=final_result;
+    document.getElementById("input_tape").value=input_array[0]+'-'+input_array[1]+' = '+final_result;
 }
 
 
