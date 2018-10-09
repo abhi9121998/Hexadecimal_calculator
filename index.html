@@ -14,6 +14,16 @@
                 background-color: skyblue;
                 color: white;
             }
+            .buttonclear
+            {
+                width: 127px;
+                height:30px;
+            }
+            .buttonclear:hover
+            {
+                background-color: lightsalmon;
+                color: white;
+            }
             .signbutton:hover 
             {
                 background-color: darkseagreen;
@@ -22,6 +32,12 @@
             .equalbutton:hover 
             {
                 background-color: red;
+                color: white;
+            }
+            .header_cal
+            {
+                width: 327px;
+                background-color: lightcoral;
                 color: white;
             }
         </style>
@@ -157,10 +173,19 @@
                             input_tape+=' XOR ';
                             document.getElementById("input_tape").value=input_tape;
                         }
+                        else if(this.id==='idcl')
+                        {
+                            input_tape=input_tape.slice(0,input_tape.length-1);
+                            document.getElementById("input_tape").value=input_tape;
+                        }
+                        else if(this.id==='idac')
+                        {
+                            input_tape='';
+                            document.getElementById("input_tape").value=input_tape;
+                        }
                         else if(this.id==='idequal')
                         {
                             var input_tape_temp=document.getElementById("input_tape").value;
-                            //alert(input_tape_temp);
                             getInputTape(input_tape_temp);
                         }
                     };
@@ -172,6 +197,11 @@
     <body>
     <center>
         <table border="1">
+            <tr>
+                <td colspan = "5">
+                    <button class="header_cal">HEXADECIMAL CALCULATOR</button>
+                </td>
+            </tr>
             <tr>
                 <td colspan = "5">
                     <input type='text' id='input_tape' placeholder='0' size='42'>
@@ -211,6 +241,10 @@
                <td><button class="bdesign signbutton" id='idNot' onclick="f()">~</button></td>
                <td><button class="bdesign signbutton" id='idXor' onclick="f()">^</button></td>
                <td><button class="bdesign equalbutton" id='idequal' onclick="f()">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="buttonclear" id='idcl' onclick="f()">CL</button></td>
+                <td colspan="2"><button class="buttonclear" id='idac' onclick="f()">AC</button></td>
             </tr>
         </table>
         </center>
