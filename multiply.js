@@ -72,5 +72,5 @@ function multiplication(input_array)
     }
     final_result=result[result.length-1];
     //alert('final_result : '+final_result);
-    document.getElementById('input_tape').value=input_array[0]+'*'+input_array[1]+' = '+final_result;
+    document.getElementById('input_tape').value=final_result;
 }

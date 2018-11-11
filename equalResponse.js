@@ -15,6 +15,18 @@ function getInputTape(input_tape)
         //alert(input_array[0]+" , "+input_array[1]);
         add(input_array);
     }
+    else if(input_tape.includes('/'))
+    {
+        input_array=input_tape.split('/');
+        //alert(input_array[0]+" , "+input_array[1]);
+        var a=parseInt(input_array[0],16);
+        //alert(a);
+        var b=parseInt(input_array[1],16);
+        //alert(b);
+        var res=a/b;
+        //alert(parseInt(res,10).toString(16));
+        document.getElementById("input_tape").value=parseInt(res,10).toString(16);
+    }
     else if(input_tape.includes('-'))
     {
         input_array=input_tape.split('-');

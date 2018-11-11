@@ -95,7 +95,7 @@ function add(input_array)
         }
         j--;
     }
-    document.getElementById("input_tape").value=input_array[0]+'+'+input_array[1]+' = '+final_result;
+    document.getElementById("input_tape").value=final_result;
     return final_result;
 }
 
